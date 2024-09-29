@@ -20,7 +20,7 @@ const Navbar: React.FC = () => {
         <div className="hidden md:flex space-x-4 items-center">
           <Link href="/" className="hover:scale-110 font-semibold transition-transform duration-300">Home</Link>
           <Link href="/about" className="hover:scale-110 font-semibold transition-transform duration-300">About</Link>
-          <Link href="/contact" className="hover:scale-110 font-semibold transition-transform duration-300">Blog</Link>
+          <Link href="/blog" className="hover:scale-110 font-semibold transition-transform duration-300">Blog</Link>
           <Link href="/contact" className="hover:scale-110 font-semibold transition-transform duration-300">Contact</Link>
           <div className="flex items-center">
             <Button className="mx-1" variant="outline">
