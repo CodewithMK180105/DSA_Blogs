@@ -1,5 +1,7 @@
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import fs from "fs";
+import matter from "gray-matter";
 
 interface Blog {
   title: string;
@@ -10,25 +12,13 @@ interface Blog {
   image: string;
 }
 
-const blogs: Blog[] = [
-  {
-    title: "First Blog",
-    description: "This is the description for the first blog.",
-    slug: "first-blog",
-    date: "2023-10-01",
-    author: "John Doe",
-    image: "https://via.placeholder.com/150",
-  },
-  {
-    title: "Second Blog",
-    description: "This is the description for the second blog.",
-    slug: "second-blog",
-    date: "2023-10-02",
-    author: "Jane Doe",
-    image: "https://via.placeholder.com/150",
-  },
-  // Add more blog objects as needed
-];
+const dirContent=fs.readdirSync("content","utf-8");
+console.log(dirContent)
+const blogs=dirContent.map(file=>{
+  const fileContent=fs.readFileSync(`content/${file}`);
+  const {data}=matter(fileContent);
+  return data;
+})
 
 const Blog: React.FC = () => {
   return (
@@ -38,7 +28,7 @@ const Blog: React.FC = () => {
         {blogs.map((blog, index) => (
           <div
             key={index}
-            className="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden"
+            className="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden hover:scale-105 duration-200 cursor-pointer"
           >
             <img
               src={blog.image}
@@ -50,8 +40,10 @@ const Blog: React.FC = () => {
                 {blog.title}
               </h2>
               <p className="text-gray-600 dark:text-gray-300 mb-4">
-                {blog.description}
-              </p>
+  {blog.description.split(' ').length > 20 
+    ? blog.description.split(' ').slice(0, 20).join(' ') + '...' 
+    : blog.description}
+</p>
               <div className="text-sm text-gray-500 dark:text-gray-400 mb-4">
                 <span>{blog.date}</span> | <span>{blog.author}</span>
               </div>

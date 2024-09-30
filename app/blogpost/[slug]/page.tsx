@@ -12,7 +12,8 @@ export default function Page({params}: {params: {slug: string}}){
     return (
         <div className="max-w-5xl mx-auto p-4">
             <h1 className="text-3xl font-bold mb-4">{Blog.title}</h1>
-            <p className="text-lg mb-2">{Blog.description}</p>
+            <p className="text-lg mb-2 border-l-4 border-gray-500 pl-4 italic">&quot;{Blog.description}&quot;</p>
+
             <div className="flex gap-2 italic"> 
                 <p className="text-sm text-gray-500 mb-4">By {Blog.author}</p>
                 <p className="text-sm text-gray-500 mb-4">{Blog.date}</p>
