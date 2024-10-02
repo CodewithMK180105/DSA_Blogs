@@ -1,4 +1,6 @@
+import typography from '@tailwindcss/typography';
 import type { Config } from "tailwindcss";
+
 
 const config: Config = {
     darkMode: ["class"],
@@ -75,7 +77,9 @@ const config: Config = {
       rotate: ['hover'],
     },
   },
-  plugins: [],
+  plugins: [
+    typography
+  ],
 };
 export default config;
 

@@ -1,6 +1,6 @@
 ---
 title: "Merge Two Sorted Lists"
-description: "ou are given the heads of two sorted linked lists list1 and list2.
+description: "You are given the heads of two sorted linked lists list1 and list2.
 
 Merge the two lists into one sorted list. The list should be made by splicing together the nodes of the first two lists.
 
@@ -20,10 +20,14 @@ image: "https://res.cloudinary.com/dffoynel3/image/upload/v1727709243/merge-two-
  *     ListNode(int x) : val(x), next(nullptr) {}
  *     ListNode(int x, ListNode *next) : val(x), next(next) {}
  * };
- */
+ **/
+
 class Solution {
-public:
+    
+    public:
+    
     ListNode* mergeTwoLists(ListNode* list1, ListNode* list2) {
+        
         ListNode* ptr=new ListNode();
         ListNode* temp=ptr;
 
