@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import fs from "fs";
 import matter from "gray-matter";
+import Image from "next/image";
 
 interface Blog {
   title: string;
@@ -30,10 +31,12 @@ const Blog: React.FC = () => {
             key={index}
             className="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden hover:scale-105 duration-200 cursor-pointer"
           >
-            <img
+            <Image
               src={blog.image}
               alt={blog.title}
               className="w-full h-48 object-cover"
+              width={500}
+              height={500}
             />
             <div className="p-4">
               <h2 className="text-2xl font-bold mb-2 dark:text-white">

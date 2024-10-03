@@ -31,6 +31,7 @@
     "shiki": "^1.21.0",
     "tailwind-merge": "^2.5.2",
     "tailwindcss-animate": "^1.0.7",
+    "typed.js": "^2.1.0",
     "unified": "^11.0.5",
     "vfile-reporter": "^8.1.1"
   },
