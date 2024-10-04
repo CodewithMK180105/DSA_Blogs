@@ -18,27 +18,49 @@ const Navbar: React.FC = () => {
           <Link href={"/"}>Manishkumar DSA</Link>
         </div>
         <div className="hidden md:flex space-x-4 items-center">
-          <Link href="/" className="hover:scale-110 font-semibold transition-transform duration-300">Home</Link>
-          <Link href="/about" className="hover:scale-110 font-semibold transition-transform duration-300">About</Link>
-          <Link href="/blog" className="hover:scale-110 font-semibold transition-transform duration-300">Blog</Link>
-          <Link href="/contact" className="hover:scale-110 font-semibold transition-transform duration-300">Contact</Link>
+          <Link
+            href="/"
+            className="hover:scale-110 font-semibold transition-transform duration-300"
+          >
+            Home
+          </Link>
+          <Link
+            href="/about"
+            className="hover:scale-110 font-semibold transition-transform duration-300"
+          >
+            About
+          </Link>
+          <Link
+            href="/blog"
+            className="hover:scale-110 font-semibold transition-transform duration-300"
+          >
+            Blog
+          </Link>
+          <Link
+            href="/contact"
+            className="hover:scale-110 font-semibold transition-transform duration-300"
+          >
+            Contact
+          </Link>
           <div className="flex items-center">
             <Link href="/login">
-            <Button className="mx-1" variant="outline">
-              Login
-            </Button>
+              <Button className="mx-1" variant="outline">
+                Login
+              </Button>
             </Link>
             <Link href="/register">
-            <Button className="mx-1" variant="outline">
-              Login
-            </Button>
-            </Link>           
-            <ModeToggle />           
+              <Button className="mx-1" variant="outline">
+                Login
+              </Button>
+            </Link>
+            <ModeToggle />
           </div>
         </div>
         <div className="md:hidden">
           <Sheet>
-            <span className="mr-3"><ModeToggle /></span>
+            <span className="mr-3">
+              <ModeToggle />
+            </span>
             <SheetTrigger>
               <svg
                 className="w-6 h-6"
@@ -57,24 +79,34 @@ const Navbar: React.FC = () => {
             </SheetTrigger>
             <SheetContent className="">
               <SheetHeader>
-                <SheetTitle className="font-bold mt-6">Manishkumar Blogs</SheetTitle>
+                <SheetTitle className="font-bold mt-6">
+                  Manishkumar Blogs
+                </SheetTitle>
                 <SheetDescription className="mx-auto">
                   <div className="flex flex-col gap-6 mt-6">
-                    <Link className="text-center" href="/">Home</Link>
-                    <Link className="text-center" href="/about">About</Link>
-                    <Link className="text-center" href="/blog">Blog</Link>
-                    <Link className="text-center" href="/contact">Contact</Link>
+                    <Link className="text-center" href="/">
+                      Home
+                    </Link>
+                    <Link className="text-center" href="/about">
+                      About
+                    </Link>
+                    <Link className="text-center" href="/blog">
+                      Blog
+                    </Link>
+                    <Link className="text-center" href="/contact">
+                      Contact
+                    </Link>
                     <div>
-                    <Link href="/login">
-            <Button className="mx-1" variant="outline">
-              Login
-            </Button>
-            </Link>
-            <Link href="/register">
-            <Button className="mx-1" variant="outline">
-              Sign In
-            </Button>
-            </Link>  
+                      <Link href="/login">
+                        <Button className="mx-1" variant="outline">
+                          Login
+                        </Button>
+                      </Link>
+                      <Link href="/register">
+                        <Button className="mx-1" variant="outline">
+                          Sign In
+                        </Button>
+                      </Link>
                     </div>
                   </div>
                 </SheetDescription>
