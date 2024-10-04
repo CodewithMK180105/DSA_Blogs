@@ -27,7 +27,7 @@ Width = distance between the two pointers (right - left).
 Height = the smaller of the two heights height[left] and height[right].
 The area will be the product of these two values. We then move the pointer corresponding to the shorter line inward to try to find a larger area.
 
-```c
+```c showLineNumbers
 class Solution {
 
 public:

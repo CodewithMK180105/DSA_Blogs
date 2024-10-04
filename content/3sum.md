@@ -30,8 +30,10 @@ To solve this problem efficiently, we use a sorted array and a two-pointer appro
 **3.Use two pointers:** After fixing nums[i], use two pointers: one starting from the next element j = i + 1 and the other from the end k = nums.size() - 1. Move the pointers inward based on the sum of the elements.
 
 **4.Skip duplicates:** After finding a valid triplet, we skip any duplicate elements to ensure we only include unique triplets.
-Code Explanation:
-```c
+
+## Code Explanation:
+
+```c showLineNumbers
 class Solution {
 public:
     vector<vector<int>> threeSum(vector<int>& nums) {

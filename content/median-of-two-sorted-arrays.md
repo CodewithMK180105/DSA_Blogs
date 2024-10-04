@@ -39,7 +39,7 @@ The median is (2 + 3) / 2 = 2.5.
 
 Here’s the C++ code that implements this logic using binary search:
 
-```c
+```c showLineNumbers
 class Solution {
 public:
     double findMedianSortedArrays(vector<int>& nums1, vector<int>& nums2) {

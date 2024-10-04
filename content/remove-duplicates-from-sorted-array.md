@@ -32,7 +32,7 @@ Output: 2 (The first two elements of nums will now contain 1 and 2.)
 
 Here’s the C++ code that implements this logic:
 
-```c
+```c showLineNumbers
 class Solution {
 public:
     int removeDuplicates(vector<int>& nums) {

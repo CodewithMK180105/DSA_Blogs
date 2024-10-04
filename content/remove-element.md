@@ -46,7 +46,7 @@ After completing the loop, the value of index represents the new length of the m
 
 C++ Code Implementation
 
-```c
+```c showLineNumbers
 class Solution {
 public:
     int removeElement(vector<int>& nums, int val){

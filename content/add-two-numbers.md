@@ -22,7 +22,7 @@ For instance, the linked list 2 -> 4 -> 3 represents the number 342, and 5 -> 6 
 Code Implementation
 Here’s the C++ code that implements this logic:
 
-```c
+```c showLineNumbers
 /**
  * Definition for singly-linked list.
  * struct ListNode {

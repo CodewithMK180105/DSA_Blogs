@@ -35,7 +35,7 @@ The merged linked list should look like:
 
 Here’s the C++ code that implements this merging logic:
 
-```c
+```c showLineNumbers
 /**
  * Definition for singly-linked list.
  * struct ListNode {

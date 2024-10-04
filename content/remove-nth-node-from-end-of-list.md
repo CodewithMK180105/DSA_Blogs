@@ -63,7 +63,7 @@ Finally, return the head of the modified linked list.
 
 ## C++ Code Implementation
 
-```c
+```c showLineNumbers
 /**
  * Definition for singly-linked list.
  * struct ListNode {

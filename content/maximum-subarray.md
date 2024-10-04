@@ -19,7 +19,7 @@ For example, given the array [-2,1,-3,4,-1,2,1,-5,4], the maximum sum of the con
 ## Code Implementation
 Here’s the C++ code that implements this logic using Kadane's Algorithm:
 
-```c
+```c showLineNumbers
 class Solution {
 public:
     int maxSubArray(vector<int>& nums) {
