@@ -23,12 +23,16 @@ const Navbar: React.FC = () => {
           <Link href="/blog" className="hover:scale-110 font-semibold transition-transform duration-300">Blog</Link>
           <Link href="/contact" className="hover:scale-110 font-semibold transition-transform duration-300">Contact</Link>
           <div className="flex items-center">
+            <Link href="/login">
             <Button className="mx-1" variant="outline">
               Login
             </Button>
+            </Link>
+            <Link href="/register">
             <Button className="mx-1" variant="outline">
-              Sign Up
+              Login
             </Button>
+            </Link>           
             <ModeToggle />           
           </div>
         </div>
@@ -61,12 +65,16 @@ const Navbar: React.FC = () => {
                     <Link className="text-center" href="/blog">Blog</Link>
                     <Link className="text-center" href="/contact">Contact</Link>
                     <div>
-                      <Button className="mx-1" variant="outline">
-                        Login
-                      </Button>
-                      <Button className="mx-1" variant="outline">
-                        Sign Up
-                      </Button>
+                    <Link href="/login">
+            <Button className="mx-1" variant="outline">
+              Login
+            </Button>
+            </Link>
+            <Link href="/register">
+            <Button className="mx-1" variant="outline">
+              Sign In
+            </Button>
+            </Link>  
                     </div>
                   </div>
                 </SheetDescription>
