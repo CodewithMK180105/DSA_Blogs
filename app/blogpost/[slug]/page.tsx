@@ -1,6 +1,6 @@
 import fs from "fs";
 import matter from "gray-matter";
-// import { notFound } from "next/navigation";
+import { notFound } from "next/navigation";
 import rehypeDocument from 'rehype-document'
 import rehypeFormat from 'rehype-format'
 import rehypeStringify from 'rehype-stringify'
@@ -15,9 +15,9 @@ import { transformerCopyButton } from "@rehype-pretty/transformers";
 export default async function Page({params}: {params: {slug: string}}){
 
     const filePath=`content/${params.slug}.md`;
-    // if(!fs.existsSync(filePath)){
-    //     notFound();
-    // }
+    if(!fs.existsSync(filePath)){
+        notFound();
+    }
     const fileContent=fs.readFileSync(filePath,"utf-8")
     const {content,data}=matter(fileContent);
 
