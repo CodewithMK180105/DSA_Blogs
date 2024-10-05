@@ -50,7 +50,7 @@ const Navbar: React.FC = () => {
             </Link>
             <Link href="/register">
               <Button className="mx-1" variant="outline">
-                Login
+                Sign Up
               </Button>
             </Link>
             <ModeToggle />
