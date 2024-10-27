@@ -94,7 +94,7 @@ interface PageProps {
     data: BlogData; // Add data to the interface
 }
 
-// Use generateStaticParams to get all slugs from the content folder
+// use generateStaticParams to get all slugs from the content folder
 export async function generateStaticParams() {
     const files = fs.readdirSync("content");
     return files.map(file => ({
