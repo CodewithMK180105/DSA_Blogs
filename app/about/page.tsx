@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 const AboutPage: React.FC = () => {
   const courses = [
@@ -38,9 +39,11 @@ const AboutPage: React.FC = () => {
                 Empowering developers with in-depth knowledge of Data Structures
                 and Algorithms.
               </p>
+              <Link href="https://leetcode.com/u/CodewithMK180105/">
               <Button className="bg-white text-purple-500 hover:bg-purple-100 animate-bounce">
-                Explore More
+              Explore to my Leetcode
               </Button>
+              </Link>
             </div>
             <div className="md:w-1/2 animate-slideInRight">
               <Image
@@ -77,7 +80,7 @@ const AboutPage: React.FC = () => {
                   />
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-semibold mb-2 text-gray-800 dark:text-white mt-5">
+                  <h3 className="text-xl font-semibold mb-2 text-gray-800 dark:text-white mt-16">
                     {project.title}
                   </h3>
                   <p className="text-gray-600 dark:text-gray-300 mb-4">
