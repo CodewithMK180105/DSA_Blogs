@@ -1,0 +1,97 @@
+---
+title: "Removing Stars from a String"
+description: "Given a string s with stars '*', remove the closest non-star character to the left of each '*'."
+slug: "removing-stars-from-a-string"
+date: "03-11-24"
+author: "Manishkumar Gupta"
+image: ""
+---
+
+## Problem: Removing Stars from a String (LeetCode #2390)
+
+The "Removing Stars from a String" problem (LeetCode #2390) requires removing stars `'*'` in a given string `s` by deleting the closest non-star character to the left of each `'*'`. The solution needs to ensure the final string is unique and contains no stars.
+
+## Problem Statement
+
+Given a string `s`, return the resulting string after performing the following operations:
+1. For each `'*'` in `s`, remove it along with the closest non-star character to its left.
+2. Continue until all stars have been removed.
+
+**Example:**
+- **Input:** `s = "leet**cod*e"`
+- **Output:** `"lecoe"`
+  
+Explanation:
+1. Remove the 't' closest to the first `'*'`, resulting in `"lee*cod*e"`.
+2. Remove the 'e' closest to the second `'*'`, resulting in `"lecod*e"`.
+3. Remove the 'd' closest to the last `'*'`, resulting in `"lecoe"`.
+
+**Constraints:**
+- \(1 \leq s.\text{length} \leq 10^5\)
+- `s` consists of lowercase English letters and stars `'*'`.
+- Each `'*'` will always have a non-star character to its left to remove.
+
+## Solution Overview
+
+To solve this efficiently, we can use a stack to manage the characters in the string as we process it. This approach allows us to remove characters in \(O(n)\) time, where \(n\) is the length of the string.
+
+## Approach
+
+**1. Use a stack for character storage:** We iterate through each character in `s`. For every `'*'` encountered, we pop the top character from the stack (effectively removing the closest non-star character to the left). For other characters, we simply push them onto the stack.
+
+**2. Construct the result string:** Once the traversal is complete, the stack will contain the characters of the final string in the correct order. Convert the stack to a string and return it.
+
+### Code Explanation
+
+```cpp
+class Solution {
+public:
+    string removeStars(string s) {
+        stack<char> charStack; // Stack to store the characters
+        
+        for(char ch : s) {
+            if(ch == '*') {
+                if(!charStack.empty()) {
+                    charStack.pop(); // Remove the closest non-star character
+                }
+            } else {
+                charStack.push(ch); // Add the character to the stack
+            }
+        }
+        
+        // Construct the result string from the stack
+        string result = "";
+        while(!charStack.empty()) {
+            result += charStack.top();
+            charStack.pop();
+        }
+        
+        // The stack gives us characters in reverse order, so reverse the result
+        reverse(result.begin(), result.end());
+        return result;
+    }
+};
+```
+## Dry Run
+
+**Example:** `s = "erase*****"`
+
+- **Initial Stack:** `[]`
+- **Step-by-Step Process:**
+  - Add 'e': `['e']`
+  - Add 'r': `['e', 'r']`
+  - Add 'a': `['e', 'r', 'a']`
+  - Add 's': `['e', 'r', 'a', 's']`
+  - Add 'e': `['e', 'r', 'a', 's', 'e']`
+  - For each `'*'`, pop the stack until it becomes empty.
+  
+- **Final Result:** `""`
+
+## Complexity Analysis
+
+- **Time Complexity:** \(O(n)\), where \(n\) is the length of the string `s`. Each character is processed once.
+- **Space Complexity:** \(O(n)\), for the stack used to build the result.
+
+## Conclusion
+
+This solution efficiently removes stars and their corresponding characters from the string using a stack. It leverages stack operations to ensure that the removal process is performed in a single pass, making it well-suited for larger input sizes.
