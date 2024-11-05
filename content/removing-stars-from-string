@@ -4,7 +4,7 @@ description: "Given a string s with stars '*', remove the closest non-star chara
 slug: "removing-stars-from-a-string"
 date: "03-11-24"
 author: "Manishkumar Gupta"
-image: ""
+image: "https://res.cloudinary.com/dffoynel3/image/upload/v1730620855/removing-stars-from-a-string_k4zhiu.png"
 ---
 
 ## Problem: Removing Stars from a String (LeetCode #2390)

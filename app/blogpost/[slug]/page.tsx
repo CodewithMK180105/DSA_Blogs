@@ -14,7 +14,7 @@
 //     params: {
 //         slug: string;
 //     };
-// }   
+// }
 
 // export default async function Page({ params }: PageProps) {
 //     // Construct the file path
@@ -67,20 +67,18 @@
 //     );
 // }
 
-
-
 // app/blogpost/[slug]/page.tsx
 "use client"; // Mark this component as a Client Component
 
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import matter from "gray-matter";
-import rehypeDocument from 'rehype-document';
-import rehypeFormat from 'rehype-format';
-import rehypeStringify from 'rehype-stringify';
-import remarkParse from 'remark-parse';
-import remarkRehype from 'remark-rehype';
-import { unified } from 'unified';
+import rehypeDocument from "rehype-document";
+import rehypeFormat from "rehype-format";
+import rehypeStringify from "rehype-stringify";
+import remarkParse from "remark-parse";
+import remarkRehype from "remark-rehype";
+import { unified } from "unified";
 import rehypePrettyCode from "rehype-pretty-code";
 import { transformerCopyButton } from "@rehype-pretty/transformers";
 
@@ -98,13 +96,13 @@ interface Blog {
 const processor = unified()
   .use(remarkParse)
   .use(remarkRehype)
-  .use(rehypeDocument, { title: 'Blog Post' })
+  .use(rehypeDocument, { title: "Blog Post" })
   .use(rehypeFormat)
   .use(rehypePrettyCode, {
     theme: "one-dark-pro",
     transformers: [
       transformerCopyButton({
-        visibility: 'always',
+        visibility: "always",
         feedbackDuration: 3000,
       }),
     ],
@@ -126,12 +124,12 @@ const BlogPost = ({ params }: { params: { slug: string } }) => {
 
       if (selectedBlog) {
         const { content } = matter(selectedBlog.content);
-        
+
         // Process Markdown to HTML
         const file = await processor.process(content);
         setHtmlContent(String(file));
       }
-      
+
       setLoading(false);
     };
 
@@ -156,6 +154,14 @@ const BlogPost = ({ params }: { params: { slug: string } }) => {
         <span>By {blog.author}</span>
         <span>{blog.date}</span>
       </div>
+      <a
+        href={`https://leetcode.com/problems/${blog.slug}/description/`}
+        className="text-blue-500"
+        target="_blank"
+      >
+        Visit this problem on LeetCode
+      </a>
+
       <Image
         src={blog.image}
         alt={blog.title}
@@ -164,9 +170,9 @@ const BlogPost = ({ params }: { params: { slug: string } }) => {
         height={400}
       />
       <div
-  dangerouslySetInnerHTML={{ __html: htmlContent }}
-  className="prose dark:prose-invert w-full max-w-full"
-/>
+        dangerouslySetInnerHTML={{ __html: htmlContent }}
+        className="prose dark:prose-invert w-full max-w-full"
+      />
     </div>
   );
 };

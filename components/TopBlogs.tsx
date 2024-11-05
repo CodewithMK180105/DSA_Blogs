@@ -36,7 +36,7 @@ export default function TopBlogs() {
                   className="mt-4 text-orange-600 dark:text-orange-400"
                   dangerouslySetInnerHTML={{ __html: blog.description }}
                 />
-                <Link href={blog.redirection_link}>
+                <Link href={blog.redirection_link} target="_blank">
                   <Button
                     className="bg-orange-600 text-white w-full py-5 text-md rounded-lg mt-6 border-none"
                     variant="outline"
