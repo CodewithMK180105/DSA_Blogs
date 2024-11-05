@@ -92,7 +92,7 @@
     {
       "title": "Maximum Number of Vowels in a Substring of Given Length",
       "description": "Given a string s and an integer k, return the maximum number of vowels in any substring of length k.",
-      "slug": "maximum-number-of-vowels-in-substring",
+      "slug": "maximum-number-of-vowels-in-a-substring-of-given-length",
       "date": "03-11-24",
       "author": "Manishkumar Gupta",
       "image": "https://res.cloudinary.com/dffoynel3/image/upload/v1730621909/maximum-number-of-vowels-in-substring_eykjyd.png",
@@ -101,7 +101,7 @@
     {
       "title": "Delete the Middle Node of a Linked List",
       "description": "You are given the head of a linked list. Delete the middle node, and return the head of the modified linked list.",
-      "slug": "delete-middle-node-of-a-linked-list",
+      "slug": "delete-the-middle-node-of-a-linked-list",
       "date": "03-11-24",
       "author": "Manishkumar Gupta",
       "image": "https://res.cloudinary.com/dffoynel3/image/upload/v1730622621/delete-middle-node-of-a-linked-list_lvhbfo.png",
