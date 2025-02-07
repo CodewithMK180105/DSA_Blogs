@@ -22,7 +22,7 @@ DSA Blogs is a **Next.js**-based blog website designed to help developers learn 
 1. Clone the repository:
    ```bash
    git clone https://github.com/CodewithMK180105/DSA_Blogs.git
-   cd dsa-blogs
+   cd DSA_Blogs
    ```
 2. Install dependencies:
    ```bash
