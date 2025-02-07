@@ -19,6 +19,9 @@ DSA Blogs is a **Next.js**-based blog website designed to help developers learn 
 ![Homepage](screenshots/HomePage.png)
 ![Blog Page](screenshots/BlogPage.png)
 
+## 📽 Blog Demo Video
+[Video](screenshots/blogDemo.mp4)
+
 ## 🔧 Installation & Setup
 1. Clone the repository:
    ```bash
