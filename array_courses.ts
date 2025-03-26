@@ -43,11 +43,19 @@ const courses: Course[] = [
     {
         id: 5,
         image: "https://res.cloudinary.com/dffoynel3/image/upload/v1730111254/Redux_Hitesh_abz8lg.png",
-        alt: "Redux - Hitesh",
+        alt: "Redux - Hitesh Choudhary",
         title: 'Mastering Redux - A Tutorial by Chai aur Code',
         description: "Dive into state management with Redux in this tutorial by Chai aur Code. Learn to efficiently manage application state, handle complex data flows, and create scalable applications using Redux. Perfect for anyone looking to enhance their React development skills.",
         redirection_link: "https://www.youtube.com/watch?v=1i04-A7kfFI&t=3721s"
-    }    
+    },    
+    {
+        id: 6,
+        image: "https://res.cloudinary.com/dffoynel3/image/upload/v1743005349/Screenshot_2025-03-26_213007_e26met.png",
+        alt: "Backend - Hitesh Choudhary",
+        title: 'Mastering Backend with MERN Stack - A Tutorial by Chai aur Code',
+        description: "Learn to build robust and scalable backend applications using the MERN stack in this tutorial by Chai aur Code. Dive deep into Node.js, Express, MongoDB, and integrate it seamlessly with React. This guide covers authentication, database operations, API development, and deployment—perfect for aspiring full-stack developers.",
+        redirection_link: "https://www.youtube.com/playlist?list=PLu71SKxNbfoBGh_8p_NS-ZAh6v7HhYqHW"
+    },    
 ];
 
 export default courses;

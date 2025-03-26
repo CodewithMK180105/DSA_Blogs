@@ -1,7 +1,10 @@
 'use client'
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 import Typed from "typed.js";
+import { FaArrowUpRightFromSquare } from "react-icons/fa6";
+
 
 export default function Hero(){
 
@@ -10,7 +13,7 @@ export default function Hero(){
 
   React.useEffect(() => {
     const typed = new Typed(el.current, {
-      strings: ['Arrays', 'Vectors', 'Stacks', 'Queues', 'Linked Lists', 'Trees', 'Graphs', 'Hash Tables', 'Web Development', 'Software Engineering', 'Data Science', 'Machine Learning'],
+      strings: ['Arrays', 'Vectors', 'Strings', 'Searching', 'Sorting', 'Prefix-Suffix Sum', 'Sliding Window', 'Bitwise Operator', 'Math And Prime', 'Linked Lists', 'Stacks', 'Queues', 'Trees', 'Hash Tables'],
       typeSpeed: 100,
       loop: true,
     });
@@ -31,8 +34,9 @@ export default function Hero(){
             A <span className="font-semibold">free repository</span> of Data
             Structures and Algorithms (DSA)
             <br className="hidden lg:block" /> <span ref={el} /> <br />
-            <span className="text-lg font-semibold underline decoration-primary">
-              [Manishkumar]<span className="hidden sm:inline-block">(https://github.com/CodewithMK180105/DSA_Blogs)</span>
+            <span className="flex items-center gap-2 mt-3 text-lg font-semibold text-blue-600 hover:text-blue-800 transition-colors duration-200">
+              <Link href="https://github.com/CodewithMK180105/DSA-using-Cpp">Visit Repository</Link>
+              <FaArrowUpRightFromSquare />
             </span>
           </h1>
           <p className="mt-4 text-lg text-gray-500 dark:text-gray-300">
